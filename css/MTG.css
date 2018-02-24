@@ -1,0 +1,470 @@
+body {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 16px;
+    margin: 0;
+    scroll-behavior: smooth;
+    background-color: rgb(230,230,230);
+    overflow-x: hidden;
+}
+
+.ms {
+    vertical-align: baseline;
+}
+
+#nav {
+    position: fixed;
+    background-color: rgba(255,255,255,0.9);
+    top: 0;
+    right: 0;
+    left: 0;
+    width: auto;
+    height: 4rem;
+    z-index: 5;
+}
+
+#nav i {
+    font-size: 2rem;
+    margin-left: 1.8rem;
+    line-height: 4rem;
+    float: left;
+}
+
+#nav b {
+    display: block;
+    font-size: 1.5rem;
+    line-height: 4rem;
+    float: left;
+}
+
+.left {
+    width: 16rem;
+}
+
+#fog {
+    position: fixed;
+    height: 4rem;
+    width: 100%;
+    top: 0;
+    background-image: linear-gradient(0deg, transparent, rgb(230,230,230) 75%);
+    z-index: 4;
+}
+
+.rarity {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.rarity > div {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5rem;
+    border: 0.3rem solid black;
+    margin-bottom: 0.5rem;
+}
+
+.rarity > u {
+    position: static;
+    text-align: center;
+}
+
+.common {
+    background-image:
+        linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0) 90%),
+        linear-gradient(90deg, rgb(54, 49, 49), rgb(42, 38, 38) 45%, rgb(42, 38, 38) 55%, rgb(54, 49, 49));
+}
+
+.uncommon {
+    background-image:
+        linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0) 90%),
+        linear-gradient(90deg, rgb(95, 101, 110), rgb(140, 140, 140) 45%, rgb(140, 140, 140) 55%, rgb(95, 101, 110));
+}
+
+.rare {
+    background-image:
+        linear-gradient(90deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 70%),
+        linear-gradient(90deg, rgb(149, 118, 56), rgb(213, 176, 82) 45%, rgb(213, 176, 82) 55%, rgb(139, 110, 56));
+}
+
+.mythic {
+    background-image:
+        linear-gradient(90deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 70%),
+        linear-gradient(90deg, rgb(189, 46, 0), rgb(239, 110, 0) 45%, rgb(239, 110, 0) 55%, rgb(187, 47, 0));
+}
+
+#bookmarks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: red;
+    opacity: 0.5;
+    margin-top: 4rem;
+    z-index: 2;
+}
+
+#bookmarks ul {
+    list-style: none;
+    margin: 0;
+    margin-top: 1rem;
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
+}
+
+#bookmarks a {
+    display: block;
+    text-align: left;
+    vertical-align: middle;
+    text-decoration: none;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    color: rgb(230,230,230);
+}
+
+#bookmarks .sub {
+    padding-left: 2em;
+    font-size: 0.75em;
+}
+
+#content {
+    margin-left: 16rem;
+    padding-top: 4rem;
+    z-index: 1;
+}
+
+#content .content-wrapper {
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+
+.card-preview {
+    height: 20rem;
+    border-radius: 0.65rem;
+}
+
+h1:first-child {
+    margin-top: 2rem;
+}
+
+h1, h2{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+p, #content ul li, .grid > div {
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+    line-height: 1.5rem;
+}
+
+*[indent], #content ul li {
+    margin-left: 5rem;
+}
+
+u {
+    color: rgba(255,255,255,0.9);
+    background-color: rgba(0,0,0,0.8);
+    text-decoration: none;
+}
+
+ol {
+    list-style: symbols("❶" "❷" "❸" "❹" "❺" "❻" "❼" "❽" "❾" "❿");
+}
+
+#content ul {
+    list-style: none;
+    text-indent: 0;
+    padding: 0;
+}
+
+dfn {
+
+}
+
+figure {
+    margin: 0;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    z-index: 1;
+    justify-content: flex-start;
+}
+
+.center {
+    align-content: center;
+    justify-content: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+figure > div {
+    position: relative;
+    flex-grow: 0;
+}
+
+.grid > div {
+    width: 30%;
+}
+
+.grid > div:nth-child(3n+1), .grid > div:nth-child(3n+2) {
+    margin-right: 5%;
+}
+
+figure u {
+    cursor: pointer;
+    display: block;
+    font-size: 1.5rem;
+    position: absolute;
+    padding: 0.1rem 0.5rem;
+    border-radius: 1rem;
+    line-height: 2rem;
+}
+
+code {
+    font-family: "MPlantin";
+    padding-top: 0.2rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    padding-bottom: 0.1rem;
+    border-radius: 0.4rem;
+}
+
+code .ms {
+    font-size: 0.65em;
+}
+
+mark {
+    background-color: transparent;
+    color: inherit;
+}
+mark[w], div[w] {
+    color: #F0F2C0;
+}
+mark[u], div[u] {
+    color: #B5CDE3;
+}
+mark[b], div[b] {
+    color: #ACA29A;
+}
+mark[r], div[r], #permanents {
+    color: #DB8664;
+}
+mark[g], div[g] {
+    color: #93B483;
+}
+mark[p], div[p] {
+    color: #b164db;
+}
+
+u[w], .card[w], code[w] {
+  background-color: #F0F2C0;
+}
+u[u], .card[u], code[u] {
+  background-color: #B5CDE3;
+}
+u[b], .card[b], code[b] {
+  background-color: #ACA29A;
+}
+u[r], .card[r], code[r] {
+  background-color: #DB8664;
+}
+u[g], .card[g], code[g] {
+  background-color: #93B483;
+}
+u[c], .card[c], code[c] {
+  background-color: #BEB9B2;
+}
+
+mark[gold] {
+    text-decoration: #FFD700 wavy underline;
+}
+
+.arrow {
+    border-top: 0.5rem dotted black;
+    margin-top: 6rem;
+}
+
+#game {
+    background-color: #B5CDE3;
+    border-radius: 1rem;
+    position: relative;
+    padding: 1rem;
+    width: 80%;
+}
+
+#battlefield {
+    flex-grow: 1;
+    border: 1px dashed black;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    height: 20rem;
+}
+#out-play {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.card {
+    width: 6rem;
+    height: 8.4rem;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    transform-origin: center 5.4rem;
+}
+
+.card[tapped] {
+    transform: rotate(90deg);
+}
+
+.iso {
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+    position: absolute;
+}
+
+#library {
+    border: 0.5rem solid black;
+    margin-top: 1rem;
+}
+
+#graveyard {
+    border: 1px dashed black;
+}
+
+#hand {
+    position: absolute;
+    bottom: 0;
+    left: 10rem;
+    height: 15rem;
+    width: auto;
+}
+
+#venn {
+    height: 24rem;
+    width: 14rem;
+}
+
+#permanents, #spells {
+    position:absolute;
+    border: 0.2rem solid;
+    height: 24rem;
+    width: 24rem;
+    border-radius: 20rem;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+#permanents {
+    right: 0;
+    padding-top: 11rem;
+    padding-right: 14rem;
+    z-index: 3;
+}
+
+#spells {
+    left: 0;
+    padding-top: 10rem;
+    padding-left: 14rem;
+    z-index: 2;
+}
+
+#permanents .middle {
+    position: absolute;
+    right: 0.5rem;
+    top: 0;
+    padding-top: 8rem;
+}
+
+#basic-land {
+    width: 20%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    padding: 0.2rem;
+}
+
+#stack-figure {
+    height: 12rem;
+    width: 10rem;
+}
+
+.phase {
+    margin-top:-1.5rem;
+}
+
+.phase:first-child {
+    margin-top: 0;
+}
+
+.step {
+    display: flex;
+    flex-direction: row;
+}
+
+.step-name {
+    position: relative;
+    text-align: right;
+    flex-grow: 0;
+    min-width: 16rem;
+    font-size: 1rem;
+    padding-right: 1rem;
+    background-color: rgba(255,0,0,0.2);
+    color: rgb(100,100,100);
+    padding-top: 0.5rem;
+    line-height: 1.5rem;
+}
+
+.step-desc {
+    flex-grow: 1;
+    line-height: 1.5rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+.phase .step:first-child .step-name{
+    background-color: rgba(255,0,0,0.5);
+    color: rgb(230,230,230);
+    font-size: 1.5rem;
+    line-height: 2em;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.phase::after {
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    margin-left: 7rem;
+    border: 2rem solid transparent;
+    border-top-color: rgba(255,0,0,0.2);
+}
+
+.phase:last-child::after {
+    display: none;
+}
+
+.phase:nth-child(2n)::after {
+    border-top-color: rgba(255,0,0,0.5);
+}
+
+.phase .step:last-child .step-name{
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.step .ms {
+    margin-right: 0.5rem;
+}

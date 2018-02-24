@@ -1,0 +1,323 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Planeswalker Primer</title>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700&amp;subset=latin-ext" rel="stylesheet">
+    <link href="css/mana.css" rel="stylesheet" type="text/css" />
+    <link href="css/MTG.css" rel="stylesheet" type="text/css" />
+<body>
+    <div id="nav">
+        <div class="left"><i class="ms ms-planeswalker ms-fw"></i><b>PRIMER</b></div>
+    </div>
+    <div id="fog"></div>
+    <div id="bookmarks" class="left">
+        <ul>
+            <li><a href="#basics">The Basics</a></li>
+            <li><a href="#card" class="sub">Card Layout</a></li>
+            <li><a href="#zones" class="sub">Zones</a></li>
+            <li><a href="#types" class="sub">Card Types</a></li>
+            <li><a href="#tapping" class="sub">Tapping</a></li>
+            <li><a href="#mana" class="sub">Mana</a></li>
+            <li><a href="#turn">The Turn</a></li>
+            <li><a href="#combat">Combat</a></li>
+            <li><a href="#more">More Rules</a></li>
+            <li><a href="#stack" class="sub">Spells & The Stack</a></li>
+            <li><a href="#abilities" class="sub">Abilities</a></li>
+            <li><a href="#target" class="sub">Targeting</a></li>
+            <li><a href="#keywords" class="sub">Keywords</a></li>
+            <li><a href="#golden" class="sub">The Golden Rule</a></li>
+            <li><a href="#rarity" class="sub">Rarity</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <div class="content-wrapper">
+            <h1 id="basics">The Basics</h1>
+            <p>Magic is a card game played between 2 or more <dfn>players</dfn>. At the beginning of each game, players normally begin with 20 <dfn>life</dfn>. The goal of the game is to reduce your opponent’s life total to 0.</p>
+            <p>During the game, players take turns playing cards by spending a resource called mana, which is generated during the game. This is known as casting spells, and is how you win!</p>
+            <p>Each player owns a deck, called a <dfn>library</dfn>, of at least 40 or 60 cards which is shuffled prior to the game and kept face down.</p>
+            <p>After the libaries are shuffled the players decide who will take the first turn. Each player then draws a hand of 7 cards from their library, and the game begins.</p>
+            <h2 id="card">Card Layout</h2>
+            <figure class="center">
+                <div>
+                    <img class="card-preview" src="cards/card-front.png">
+                    <u style="left:-43%; top:2%;">Name</u>
+                    <u style="left:104%; top:2%;">Mana&nbsp;Cost</u>
+                    <u style="left:-100%; top:54%;">Type&nbsp;&mdash;&nbsp;Subtype</u>
+                    <u style="left:104%; top:54%;">Expansion&nbsp;Symbol</u>
+                    <u style="left:20%; top:70%;">Text&nbsp;Box</u>
+                    <u style="left:104%; top:87%;">Power&nbsp;/&nbsp;Toughness</u>
+                </div></figure>
+            <ul>
+                <li><dfn>Mana Cost</dfn>: The amount of mana that must be spent to play this card from your hand.</li>
+                <li><dfn>Type &mdash; Subtype</dfn>: Every card has a type that determines when it can be played, and what happens to it after you do.</li>
+                <li><dfn>Expansion Symbol</dfn>: The colour of this symbol denotes the card's rarity. Rarer cards tend to be more powerful. The symbol's shape tells you which expansion set the card is from.</li>
+                <li><dfn>Text Box</dfn>: The text in this box describes what happens after the card is played (and sometimes before).</li>
+                <li><dfn>Power / Toughness</dfn>: This text describes what happens after the card is played.</li>
+            </ul>
+            <h2 id="zones">Zones</h2>
+            <p>All cards in a game begin in the players' libraries. Once the players draw their opening hands, and begin taking turns, cards can be placed in several different places, or zones.</p>
+            <p>After you spend mana to cast a spell (i.e play a card from your hand) that card is placed in a zone depending on its type. If the card is a permanent, it is placed on the battlefield. Otherwise, it is immediately discarded, or placed in the graveyard.</p>
+            <p>The diagram below shows the different zones in a Magic game. When you play, zones do not need to be laid out as shown; players only need to be able to tell which is which.</p>
+            <figure id="game">
+                <img id="hand" src="hand.png">
+                <div id="battlefield"></div>
+                <div id="out-play">
+                    <div class="card" id="library"></div>
+                    <div class="card" id="graveyard"></div>
+                </div>
+                <u style="left:2rem; top:2rem;">Battlefield</u>
+                <u style="left:18rem; bottom:2rem;">Hand</u>
+                <u style="bottom:2rem; right:2rem;">Library</u>
+                <u style="bottom:11rem; right:2rem;">Graveyard</u>
+                <u style="top:0rem; right:0rem;"><mark u>Game</mark></u>
+                <u style="top:0rem; right: -6rem;"><mark r>Exile</mark></u></figure>
+            <ul>
+                <li><dfn>Library</dfn>: Every card a player owns begins the game in their library. Anytime a player draws a card, it is drawn from their library. When a player would draw a card, and there are none remaining, that player loses the game.</li>
+                <li><dfn>Hand</dfn>: Cards in your hand can be played by spending mana to pay their mana cost. When you <dfn>draw</dfn> cards, they are placed in your hand. Cards can also be returned to your hand by card effects. The maximum number of cards in your hand at the end of your turn is 7. These cards are normally kept hidden from anyone else.</li>
+                <li><dfn>Battlefield</dfn>: Where permanents are placed after being played from your hand. Permanents from your graveyard and library can also be placed on the battlefield due to card effects.</li>
+                <li><dfn>Graveyard</dfn>: When a card is discarded, it is placed into your graveyard.</li>
+                <li><dfn>Exile</dfn>: Due to card effects, cards can be sent to the Exile zone. This is known as <dfn>exiling</dfn>. Once exiled, cards can't be interacted with except by specific card effects. Normally, these cards are no longer part of the game.</li>
+            </ul>
+            <h2 id="types">Card Types</h2>
+            <p>Cards come in a number of types, which dictate when they can be played, where they are placed after being played, and how their rules text is read. Cards are normally played from your hand after paying their mana cost.</p>
+            <p>When most cards are played they are referred to as spells, and the act of playing a spell is called casting. Land cards are the exception. When a land is played, it does not count as a spell.</p>
+            <p>After a card is played, one of two things happen. If the card is a permanent it is placed onto the battlefield, where it's rules text contain abilities that affect the game. If it is not a permanent, players follow the card's rules text and then it is discarded.</p>
+            <p>Below is a summary of the different card types.</p>
+            <figure class="center">
+                <div id="venn">
+                    <div id="permanents" g>
+                        <i class="ms ms-land"></i>Land
+                        <div class="middle" p>
+                            <i class="ms ms-creature"></i>Creature</br>
+                            <i class="ms ms-enchantment"></i>Enchantment</br>
+                            <i class="ms ms-planeswalker"></i>Planeswalker</br>
+                            <i class="ms ms-artifact"></i>Artifact
+                        </div>
+                        <u style="left:-3rem; top:4rem;" r>Permanents</u>
+                    </div>
+                    <div id="spells" u>
+                        <i class="ms ms-sorcery"></i>Sorcery</br>
+                        <i class="ms ms-instant"></i>Instant
+                        <u style="right:-1rem; top:4rem;" u>Spells</u>
+                    </div>
+                </div></figure>
+            <p>Each card will have at least 1 type, but some permanents will have multiple types. A common example is <code c>Artifact Creature</code>. When a card has multiple types, it means it follows the rules for all its types.
+            <p>Along with types, cards can also have 1 or more <dfn>subtypes</dfn>. A creature might have the elf subtype, as in <code c>Creature &mdash; Elf</code>, or an enchantment the aura subtype, as in <code c>Enchantment &mdash; Aura</code>.</p>
+            <p>Unlike types, subtypes don't affect how you can play cards. Subtypes only provide an additional way for rules text to refer to cards.</p>
+            <h2 id="tapping">Tapping</h2>
+            <p>Permanents on the battlefield can be in one of two states; tapped or untapped. When a card is tapped, it is rotated 90&deg; and cannot be tapped again until it is untapped.</p>
+            <figure class="center">
+                <div class="card" c></div>
+                <i class="ms ms-tap ms-4x" style="margin-top: 2.2rem"></i>
+                <div class="card" tapped c></div></figure>
+            <p>Many rules and card effects will reference whether a card is tapped or not. You can think of it like turning the card on and off, or using it up.</p>
+            <p>At the beginning of each turn, tapped permanents are untapped.</p>
+            <h2 id="mana">Mana</h2>
+            <p>Mana is the resource that players spend to play cards from their hands and use their abilities.</p>
+            <p>Mana comes in 5 different <dfn>colours</dfn>, and each has a different <dfn>mana symbol</dfn>&mdash;
+                <mark r>red</mark> <i class="ms ms-r ms-cost"></i>,
+                <mark g>green</mark> <i class="ms ms-g ms-cost"></i>,
+                <mark w>white</mark> <i class="ms ms-w ms-cost"></i>,
+                <mark u>blue</mark> <i class="ms ms-u ms-cost"></i>, and
+                <mark b>black</mark> <i class="ms ms-b ms-cost"></i></p>
+            <p>There is also <dfn><mark c>colourless</mark></dfn> mana, with its own mana symbol&mdash; <i class="ms ms-c ms-cost"></i>
+            <p>Cards also have colours. If there is a coloured mana symbol in a card's mana cost, the card counts as that colour. If there are no coloured mana symbols, the card is colourless.</p>
+            <p>The most common, and important, method of generating mana is by tapping <code c>Basic Land</code>. There are 5 different basic lands, 1 for each colour in Magic&mdash;
+                <mark r>Mountains</mark>,
+                <mark g>Forests</mark>,
+                <mark w>Plains</mark>,
+                <mark u>Islands</mark>, and
+                <mark b>Swamps</mark>.
+            Each basic land produces 1 mana of its type when tapped.</p>
+            <figure class="center">
+                <img id="basic-land" src="cards/mountain.jpg">
+                <img id="basic-land" src="cards/forest.jpg">
+                <img id="basic-land" src="cards/plains.jpg">
+                <img id="basic-land" src="cards/island.jpg">
+                <img id="basic-land" src="cards/swamp.jpg"></figure>
+            <p>Mana can also be produced by spells and abilities. When mana is generated by a player it is added to their <dfn>mana pool</dfn>. Mana in a player's mana pool remains until the end of phases in a turn, or until it is spent.</p>
+            <p>A <dfn>mana cost</dfn> is the amount of mana that must be spent to play cards and activate abilities. A mana cost will normally have a combination of symbols defining the different colours required and their amounts. Each of the coloured mana symbols (<i class="ms ms-r ms-cost"></i>, <i class="ms ms-g ms-cost"></i>, <i class="ms ms-w ms-cost"></i>, <i class="ms ms-u ms-cost"></i>, <i class="ms ms-b ms-cost"></i>) implies 1 mana of that colour. A number symbol may also be shown (<i class="ms ms-1 ms-cost"></i>,
+            <i class="ms ms-2 ms-cost"></i>, &hellip;) denoting that much mana of any colour. A <dfn>converted mana cost</dfn> is the total amount of mana.</p>
+            <p>For example:</p>
+            <ul>
+                <li><i class="ms ms-g ms-cost"></i> = 1 <mark g>green</mark> mana</li>
+                <li><i class="ms ms-1 ms-cost"></i><i class="ms ms-c ms-cost"></i>= 1 mana of any colour + 1 <mark c>colourless</mark> mana</li>
+                <li><i class="ms ms-2 ms-cost"></i><i class="ms ms-u ms-cost"></i> = 2 mana of any colour + 1 <mark u>blue</mark> mana</li>
+                <li><i class="ms ms-1 ms-cost"></i><i class="ms ms-r ms-cost"></i><i class="ms ms-b ms-cost"></i> = 1 mana of any colour + 1 <mark r>red</mark> mana + 1 <mark b>black</mark> mana</li>
+                <li><i class="ms ms-3 ms-cost"></i><i class="ms ms-w ms-cost"></i><i class="ms ms-w ms-cost"></i> = 3 mana of any colour + 2 <mark w>white</mark> mana</li>
+            </ul>
+            <p>and one special case, where the player pays any amount:</p>
+            <p indent>
+                <i class="ms ms-x ms-cost"></i><i class="ms ms-r ms-cost"></i></i>
+                = any amount of mana of any colour + 1 <mark r>red</mark> mana</p>
+            <p>When <i class="ms ms-x ms-cost"></i> is included in a card's mana cost, <code c>X</code> will be referenced in the card's text box.</p>
+            <h1 id="turn">The Turn</h1>
+            <p>During a game of Magic each player takes <dfn>turns</dfn>. The <dfn>active player</dfn> is the player currently taking their turn. Each turn is defined by a set of 5 <dfn>phases</dfn> that must be started and finished in order:</p>
+            <ol>
+                <li><p>Beginning Phase</p></li>
+                <li><p>Main Phase</p></li>
+                <li><p>Combat Phase</p></li>
+                <li><p>Main Phase</p></li>
+                <li><p>Ending Phase</p></li>
+            </ol>
+            <p>The Beginning, Combat, and Ending phases are broken down further into <dfn>Steps</dfn> where specific actions take place. Phases and Steps are what determine when different types of cards can be played, if at all, and are called out by rules to tell the players how long some effects last for. The diagram below lays out the order of the phases and steps in a turn, and what happens in each one. We will use a few symbols here:</p>
+            <ul>
+                <li><i class="ms ms-sorcery ms-cost"></i> indicates that all types of cards (Creatures, Sorceries, Instants, Enchantments, Artifacts, Planeswalkers, & Land) can be played by the <b>active player</b> and Instants can be played by their opponents</li>
+                <li><i class="ms ms-instant ms-cost"></i> indicates that only Instant cards can be played by <b>any</b> player.</li>
+            </ul>
+            <figure class="column">
+                <div class="phase">
+                    <div class="step"><div class="step-name">Beginning Phase</div></div>
+                    <div class="step"><div class="step-name">Untap Step</div><div class="step-desc">Each of your tapped permanents is untapped.</div></div>
+                    <div class="step"><div class="step-name"><i class="ms ms-cost ms-instant"></i>Upkeep</div><div class="step-desc">Any effects which reference your Upkeep happen.</div></div>
+                    <div class="step"><div class="step-name"><i class="ms ms-cost ms-instant"></i>Draw Step</div><div class="step-desc">Draw 1 card from your Library.</div></div>
+                </div>
+                <div class="phase">
+                    <div class="step"><div class="step-name"><i class="ms ms-cost ms-sorcery"></i>Main Phase</div></div>
+                </div>
+                <div class="phase">
+                    <div class="step"><div class="step-name">Combat Phase</div></div>
+                    <div class="step"><div class="step-name"><i class="ms ms-cost ms-instant"></i>Beginning of Combat</div><div class="step-desc">An opportunity to play spells and activate abilities.</div></div>
+                    <div class="step"><div class="step-name"><i class="ms ms-cost ms-instant"></i>Declare Attackers</div><div class="step-desc">You may choose creatures to attack.</div></div>
+                    <div class="step"><div class="step-name"><i class="ms ms-cost ms-instant"></i>Declare Blockers</div><div class="step-desc">The player being attacked may choose creatures to block your attacking creatured.</div></div>
+                    <div class="step"><div class="step-name">Combat Damage</div><div class="step-desc">Damage by attacking and blocking creatures is dealt.</div></div>
+                    <div class="step"><div class="step-name"><i class="ms ms-cost ms-instant"></i>End of Combat</div><div class="step-desc">An opportunity to play spells and activate abilities. Any effects that end after combat end now.</div></div>
+                </div>
+                <div class="phase">
+                    <div class="step"><div class="step-name"><i class="ms ms-cost ms-sorcery"></i>Main Phase</div></div>
+                </div>
+                <div class="phase">
+                    <div class="step"><div class="step-name">Ending Phase</div></div>
+                    <div class="step"><div class="step-name"><i class="ms ms-cost ms-instant"></i>End Step</div><div class="step-desc">Last chance for players to play spells and activate abilities this turn.</div></div>
+                    <div class="step"><div class="step-name">Cleanup Step</div><div class="step-desc">Any effects which end at "end of turn" end now. All damage is removed from creatures.</div></div>
+                </div>
+            </figure>
+            <h1 id="combat">Combat</h1>
+            <h1 id="more">More Rules</h1>
+            <h2 id="stack">Spells & The Stack</h2>
+            <p>Every card a player plays from their hand, except for Land, is considered a spell. It was stated that what happens afterwords depends on the card's type. This is true, but there is something important that happens in-between.</p>
+            <p>Spells can only be cast during certain parts of a player's turn. Permanents and Sorceries can only be cast during your <dfn>Main Phase</dfn>, and while there is nothing in a special zone called the Stack. However, Instants can be played at almost any time, including on your opponent's turn!</p>
+            <p>Once a spell is cast, it is placed onto the <dfn>Stack</dfn>. After this, each player is given the chance, in turn order, to play Instant spells "in response" (Instants can be played at any time, after all!). Any additional spells are also placed onto the Stack, in the order they were cast.</p>
+            <p>Once players no longer choose to play spells, the top-most spell on the Stack will <dfn>resolve</dfn>. When a permanent resolves, it is placed on the Battlefield. When a sorcery or instant resolves, it has its effect (the instructions written in the card's text box) and is then discarded. Each player is then given another chance to play spells, as before. This continues until there are no longer any spells on the Stack.</p>
+            <figure class="center">
+                <div id="stack-figure">
+                    <div class="card iso" style="right: 1em; bottom: 0rem" g></div>
+                    <div class="card iso" style="right: 1em; bottom: 3rem" u></div>
+                    <div class="card iso" style="right: 1em; bottom: 6rem" r></div>
+                    <u style="right:10rem; bottom:3rem;">Played&nbsp;1<sup>st</sup></u>
+                    <u style="right:10rem; bottom:6rem;">2<sup>nd</sup></u>
+                    <u style="right:10rem; bottom:9rem;">3<sup>rd</sup></u>
+                </div>
+                <div class="arrow" style="width: 10rem"></div>
+                <div id="stack-figure">
+                    <div class="card iso" style="left: 2.5rem; bottom: 0rem" g></div>
+                    <div class="card iso" style="left: 2.5rem; bottom: 3rem" u></div>
+                    <div class="card iso" style="left: 2.5rem; bottom: 6rem" r></div>
+                    <u style="left:10rem; bottom:2rem;">3<sup>rd</sup></u>
+                    <u style="left:10rem; bottom:5rem;">2<sup>nd</sup></u>
+                    <u style="left:10rem; bottom:8rem;">Resolves&nbsp;1<sup>st</sup></u>
+                </div>
+            </figure>
+            <h2 id="abilities">Abilities</h2>
+            <p>The text boxes of permanents on the battlefield define abilities which affect the game. Generally, abilities are active only while the permanent is on the battlefield (but not always). There are three types of abilities:</p>
+            <ol>
+                <li>
+                    <p>Static Abilities</p>
+                    <p>These are declarations of things which are true, such as <code c>Creatures you control get +1/+1.</code>.</p>
+                </li>
+                <li>
+                    <p>Triggered Abilities</p>
+                    <p>Text which begins with "whenever", "when", and "at" are triggered abilities. When the event described occurs the text happens and can't be delayed; it happens automatically. For instance: <code c>When Silvergill Adept enters the battlefield, draw a card.</code>.</p>
+                </li>
+                <li>
+                    <p>Activated Abilities</p>
+                    <p>These abilites are activated by the player. They are easily recognizable by their structure: a cost followed by an effect, and separated by a colon <code c>:</code>. For example: <code c><i class="ms ms-cost ms-2"></i><i class="ms ms-cost ms-r"></i>: Sun-Collared Raptor gets +3/+0 until end of turn.</code></p>
+                    <p>First the cost is paid, and then the ability is activated. This can be done any time a player can play an instant.</p>
+                    <p>Activated abilities can have many different costs, from discarding cards to sacrificing creatures (place them in the graveyard), and in any combination. The most common of these are tapping the permanent the ability belongs to, denoted by the tap symbol <i class="ms ms-cost ms-tap"></i>, and mana costs.</p>
+                    <p>Basic lands each have the ability <code c><i class="ms ms-cost ms-tap"></i>: Add <i class="ms ms-cost ms-r"></i>/<i class="ms ms-cost ms-g"></i>/<i class="ms ms-cost ms-w"></i>/<i class="ms ms-cost ms-u"></i>/<i class="ms ms-cost ms-b"></i> to your mana pool.</code>, denoted by the large mana symbol in their text boxes.
+                </li>
+            </ol>
+            <p> Triggered and Activated abilities both go on the Stack. When an ability is triggered or activated it is placed on the Stack just like a spell, and can be responded to in the same way.</p>
+            <h2 id="target">Targeting</h2>
+            <p>Some spells and abilities will require you to choose a <dfn>target</dfn>. This means that you must choose something for a spell or ability to affect. Valid targets are implied by the spell or ability text. For example: <code c>Bombard deals 4 damage to target creature</code> where the player must choose a creature, or <code c>Destroy target artifact or enchantment.</code> where the player must choose an artifact or enchantment. If a spell requires a target, or to "choose" an option, the decision must be made when the spell is placed on the Stack.</p>
+            <p>Unless otherwise stated, the target must be on the Battlefield. A card's text might also specify additional conditions for valid targets, such as <code c>target <b>noncreature</b> spell</code> or <code c>target creature <b>you control</b></code>. If a target becomes invalid before the spell or ability resolves, as in it is no longer in the required zone or no longer meets the targeting conditions, it does nothing.</p>
+            <h2 id="keywords">Keywords</h2>
+            <p>Often, Magic cards will use a single word or phrase to summarize abilities and actions, called <dfn>keywords</dfn>. New keywords tend to be added with every expansion set, which means there are many, many keywords that can be found on Magic cards. Luckily, there is only a small set that is used frequently!</p>
+            <p>If you come across a keyword you do not recognize there may be reminder text to explain its effect. A summary of every keyword in Magic is also provided in a separate section of this guide.</p>
+            <p>Below are the common keyword abilities you will encounter in Magic, and the colours of the cards they are normally found on.</p>
+            <figure class="grid">
+                <div><code c>Deathtouch</code>&nbsp;<i class="ms ms-cost ms-b"></i>: Creatures dealt damage by a permanent with deathtouch are destroyed.</div>
+                <div><code c>Defender</code>&nbsp;<i class="ms ms-cost ms-w"></i>: Creatures with defender can't attack.</div>
+                <div><code c>Double Strike</code>&nbsp;<i class="ms ms-cost ms-w"></i>&nbsp;<i class="ms ms-cost ms-r"></i>: Creatures with double strike deal damage twice; the first time as if they have first strike, and the second normally.</div>
+                <div><code c>First Strike</code>&nbsp;<i class="ms ms-cost ms-w"></i>&nbsp;<i class="ms ms-cost ms-r"></i>: Creatures with first strike deal their combat damage before creatures without first strike.</div>
+                <div><code c>Flash</code>&nbsp;<i class="ms ms-cost ms-u"></i>: A spell with flash can be cast any time you could cast an instant.</div>
+                <div><code c>Flying</code>&nbsp;<i class="ms ms-cost ms-w"></i>&nbsp;<i class="ms ms-cost ms-u"></i>: A creature with flying can’t be blocked except by creatures with flying and/or reach.</div>
+                <div><code c>Haste</code>&nbsp;<i class="ms ms-cost ms-r"></i>: A creature with haste can attack as soon as it comes under your control. You can also activate its activated abilities with <i class="ms ms-cost ms-tap"></i> in the cost.</div>
+                <div><code c>Hexproof</code>&nbsp;<i class="ms ms-cost ms-u"></i>: A creature with hexproof can't be the target of spells or abilities.</div>
+                <div><code c>Indestructible</code>&nbsp;<i class="ms ms-cost ms-w"></i>&nbsp;<i class="ms ms-cost ms-c"></i>: An indestructible permanent can’t be destroyed by damage or by effects that say “destroy.”</div>
+                <div><code c>Lifelink</code>&nbsp;<i class="ms ms-cost ms-w"></i>: Damage dealt by a permanent with lifelink causes that permanent’s controller to gain that much life, in addition to behaving like normal damage.</div>
+                <div><code c>Menace</code>&nbsp;<i class="ms ms-cost ms-b"></i>&nbsp;<i class="ms ms-cost ms-r"></i>: A creature with menace can’t be blocked except by two or more creatures.</div>
+                <div><code c>Prowess</code>&nbsp;<i class="ms ms-cost ms-u"></i>Prowess is a triggered ability which means <code c>Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.</code></div>
+                <div><code c>Reach</code>&nbsp;<i class="ms ms-cost ms-g"></i>: A creature with flying can’t be blocked except by creatures with flying and/or reach.</div>
+                <div><code c>Trample</code>&nbsp;<i class="ms ms-cost ms-g"></i>: The controller of an attacking creature with trample first assigns damage to the creature(s) blocking it. Once all those blocking creatures are assigned lethal damage, any remaining damage is assigned as its controller chooses among those blocking creatures and the player or planeswalker the creature is attacking.</div>
+                <div><code c>Vigilance</code>&nbsp;<i class="ms ms-cost ms-w"></i>: Attacking doesn’t cause creatures with vigilance to tap.</div>
+            </figure>
+            <p>There are also several common keyword actions. Keyword actions replace specific rules text in a card's text box, making them easier to read. Common keyword actions are summarized below.</p>
+            <figure class="grid">
+                <div><code c>Scry</code>&nbsp;<i class="ms ms-cost ms-u"></i>: To “scry N” means to look at the top N cards of your library, put any number of them on the bottom of your library in any order and the rest on top of your library in any order.</div>
+                <div><code c>Cast</code>: To cast a spell is to take it from the zone it’s in (usually the hand), put it on the stack, and pay its costs, so that it will eventually resolve and have its effect.</div>
+                <div><code c>Counter</code>&nbsp;<i class="ms ms-cost ms-u"></i>: To counter a spell or ability means to cancel it, removing it from the stack. It doesn’t resolve and none of its effects occur. A countered spell is put into its owner’s graveyard.</div>
+                <div><code c>Create</code>: To create one or more tokens with certain characteristics, and put those tokens onto the battlefield.</div>
+                <div><code c>Destroy</code>: To destroy a permanent, move it from the battlefield to its owner’s graveyard.</div>
+                <div><code c>Discard</code>: To discard a card, move it from its owner’s hand to that player’s graveyard.</div>
+                <div><code c>Exile</code>: To exile an object, move it to the exile zone from wherever it is.</div>
+                <div><code c>Fight</code>&nbsp;<i class="ms ms-cost ms-g"></i>: A spell or ability may instruct a creature to fight another creature or it may instruct two creatures to fight each other. Each of those creatures deals damage equal to its power to the other creature.</div>
+                <div><code c>Play</code>: To play a card is to play that card as a land or cast that card as a spell, whichever is appropriate.</div>
+                <div><code c>Reveal</code>: To reveal a card, show that card to all players for a brief time. If a cost or effect causes a card to be revealed, it remains revealed for as long as necessary to complete the parts of the effect that card is relevant to.</div>
+                <div><code c>Sacrifice</code>: To move a permanent you control to its owner’s graveyard.</div>
+                <div><code c>Search</code>: To search for a card in a zone, look at all cards in that zone (even if it’s a hidden zone) and find a card that matches the given description.</div>
+                <div><code c>Shuffle</code>: To shuffle a library or a face-down pile of cards, randomize the cards within it so that no player knows their order.</div>
+            </figure>
+            <p>There are 2 additional keyword abilities and 1 keyword action that are specific to cards with the Aura and Equipment subtypes:</p>
+            <figure class="grid">
+                <div><code c>Attach</code>: To attach an Aura or Equipment to an object means to take it from where it currently is and put it onto that object. If something is attached to a permanent on the battlefield, it’s customary to place it so that it’s physically touching the permanent.</div>
+                <div><code c>Enchant</code>: A keyword ability seen on all Auras, describing what type of card the Aura can be attached to.</div>
+                <div><code c>Equip</code>: A keyword ability seen on all Equipment. It tells you how much it costs to activate the ability and attach the Equipment to one of your creatures.</div>
+            </figure>
+            <p>When an Aura is attached to a permanent or player, it is considered to be the <dfn>enchanted</dfn> permanent or player. A player chooses a permanent or player for the Aura to enchant when it enters the battlefield.</p>
+            <p>When an Equipment is attached to a creature it is considered to be the <dfn>equipped</dfn> creature. Likewise, a player chooses which creature the Equipment attaches to after the Equip ability is activated. The creature is equipped after the ability resolves.</p>
+            <p>If an enchanted permanent leaves the battlefield, the Aura is put into its owner’s graveyard. When an equipped creature leaves the battlefield, the equipment is <dfn>unattached</dfn> but remains in play. Both events also occur if the equipped or enchanted object is no longer a valid target of Enchant or Equip (no longer the right type for some reason, or because of some other effect).</p>
+            <h2 id="golden">The Golden Rule</h2>
+            <p><mark gold><strong>Whenever a card contradicts the rules, the card wins.</strong></mark></p>
+            <p>For example:</p>
+            <ul>
+                <li><code c>You may play more than one land per turn.</code></li>
+                <li><code c>At the beginning of your draw step, draw an additional card.</code></li>
+                <li><code c>You have no maximum hand size.</code></li>
+            </ul>
+            <p>An extreme example of this would be:</p>
+            <p indent><code c>You can't lose the game and your opponents can't win the game.</code></p>
+            <img class="card-preview" src="cards/platinum-angel.jpg" indent></p>
+            <h1 id="rarity">Rarity</h1>
+            <p>Each card has a rarity which tells you how scarce the card is compared to other cards. Rarity tends to be an indication of how powerful a card is, with rarer cards being more powerful. The rarity of a card is designated by the colour of its expansion symbol, shown below from most common to rarest.</p>
+            <figure class="center">
+                <div class="rarity"><div class="common"></div><u>Common</u></div>
+                <div class="rarity"><div class="uncommon"></div><u>Uncommon</u></div>
+                <div class="rarity"><div class="rare"></div><u style="bottom: -3rem">Rare</u></div>
+                <div class="rarity"><div class="mythic"></div><u style="bottom: -3rem">Mythic&nbsp;Rare</u></div>
+            </figure>
+        </div>
+    </div>
+    <script src="jquery.js"></script>
+    <script>
+        $('a[href^="#"]').on('click', function(event) {
+            var target = $(this.getAttribute('href'));
+            if( target.length ) {
+                event.preventDefault();
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top-75
+                }, 250);
+            }
+        });
+    </script>
+</body>
